@@ -1,0 +1,12 @@
+#hoverid:hover{
+    color: red;
+}
+#visitedid:visited{
+    color: blue;
+}
+#visitedid:hover{
+    color: yellow;
+}
+table{
+    border: 2px solid red;
+}

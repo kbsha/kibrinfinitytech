@@ -1,0 +1,329 @@
+<html>
+  <h1>page with css and Html</h1>
+<P>CSS is used to style the elements in a web page.<br>
+  CSS is a styling language that works together with HTML to give a page its look and layout.</P>
+  <p>CSS builds on top of HTML. <br>The style attribute allows you to use CSS properties to customize the visual presentation of HTML elements.</p>
+  <p>CSS properties control the style of HTML elements.<br> Examples of CSS properties are color, border, font-size and margin.</p>
+  <p>CSS properties and values are separated with a colon :</p>
+  <p>The CSS code for an HTML element must be enclosed in double or single quotes, following the style attribute.</p>
+  <h3>⭐CSS is used to style web pages<br>
+    ⭐ CSS is one of the three core web technologies<br>    
+    ⭐ The style attribute adds CSS to HTML tags    
+    </h3>
+    <p>When CSS code is added to HTML elements, this is called inline CSS.
+      Code a gray heading using inline CSS Ex.</p>
+      <h3 style="color:gray">Thise is the text</h3>
+      <p>css styling technique ... </p>
+      <li>inline css</li>
+      <li>internal css</li>
+      <li>external css</li>
+      <p>The styling technique that adds CSS code inside HTML elements is called…inline css</p>
+      <p>An alternative styling technique is internal CSS. Internal CSS is used to style the entire page.<br> The <u>style</u> container tag is added within the HTML document to group all the CSS code for the page.</p>
+      <p>The selector in the CSS code matches the HTML tags you want to target.</p>
+      <p>Separate multiple selectors with a comma to apply the same style to different elements. This makes your CSS code simpler.      </p>
+      <p>It's best practice to include all the internal CSS code in the <head> of the page.      </p>
+        <h3>CSS controls all the design-related aspects of your web page. This includes fonts, sizes, colors, position, spacing, layout, animations, and much more.</h3>
+        <p>CSS code creates styling rules. <br>The simplest styling rule consists of a selector, plus a declaration in curly braces {}.</p>
+        <style>
+          h2 {
+            color: brown;
+            font-size: large;
+          }
+        </style>
+        <h2>styling rule selector and declaration</h2>
+        <p>A declaration consists of two parts: a property and a value.        </p>
+        <p>⭐ CSS code is made of styling rules<br>
+          ⭐ A rule is made of a selector and a set of declarations<br> 
+          ⭐ A declaration consists of a property:value pair          </p>
+          <p>Styling rules for parent elements will also be applied to child elements by default. This is known as inheritance.<br> Child elements inherit styles from their parents.          </p>
+          <style>
+            h1{
+              color: red;
+              font-size: large;
+              background-color: yellow;
+            }
+
+          </style>
+          <h1>
+            inheritance example in styling rule<u>inherited text</u> always <em> childe inherit its parent style !</em> 
+
+          </h2>
+          <p>For total control over the design of your HTML elements, you can give them IDs and classes.</p>
+          <p>The id attribute is used to identify unique elements in an HTML document.          </p>
+          <p>You can target specific elements using hashtag # followed by the ID name as a selector.</p>
+          <style>
+            #id1{
+              color: blue;
+            }
+          </style>
+          <h2 id="id1">
+            css use id attrbuit to unique elements
+          </h2>
+          <p>Another way to identify elements is the class attribute. Use the class attribute to give the same identifier to a group of elements</p>
+          <p>class is the attribute that you’d use to apply the same style to a group of elements </p>
+          <p> You can create styling rules for a group of elements in the same class (group).<br>
+            Use a dot . followed by the class name to target all the elements in the same class. </p>
+            <style>
+              .cl1{
+                color: green;
+              }
+            </style>
+            <h2 class="cl1">
+              css use class for gropu of elements to manifast same style 
+            </h2>
+            <p class="cl1">thise text is on the same class as the above !</p>
+            <p>You can give the same class name to…Class but not id </p>
+            <p>A style rule for a class will be applied to all the elements in that class.</p>
+            <p>You can also target only those elements of a specific type that have a certain class.<br>
+              This CSS rule will modify only paragraphs with the content class.</p>
+              <style>
+                h4.demo{
+                  color: green;
+                }
+                p.demo{
+                  color:yellow
+                }
+                button.demo{
+                  color: red;
+                  background-color: black;
+                }
+
+
+              </style>
+              <h4 class="demo">Test </h4>
+              <p class="demo">Test </p>
+              <button class="demo">Test</button>
+              <p>⭐ The ID selector uses the hash # symbol and targets a specific element<br>
+                ⭐ A class gives a common identifier to a group of elements<br>
+                ⭐ The class selector uses a dot . and targets a group of elements with the same class</p>
+            
+                <p>An HTML element can be targeted for styling in different ways. For example, an element may have both a class and an ID.
+
+                  <p id="text1" class="info">Text</p>
+                  HTML
+                  Here are 3 ways to target the same HTML element. Find the correct type of selector for each method
+                  
+                  Element selector: ex. p
+                  ID selector:      ex. #id
+                  Class selector:    ex. .class1
+                  </p>
+                  <p>
+                    Each type of CSS selector has its place in this priority list. When several CSS rules target the same HTML element, the browser uses this order to decide which rule to apply.
+                    <br>
+                    inline style
+                    id selector
+                    class selector
+                    element selector
+                  </p>
+                  <p>Inline style has priority over the element rule. Ex.</p>
+                  <style>
+                    #p1{
+                      text-align: right;
+                      color: blue;
+                    }
+                  </style>
+                  <p id="p1" style="text-align: center; color: red;">new text</p>
+                <p>This priority order is known as specificity. Specificity is the algorithm used by browsers to determine the rule to apply to an element.
+                </p>
+                <p>Comments in CSS start with /* and end with */                </p>
+                <p>An alternative to inline and internal CSS is external CSS. External CSS code is written outside the HTML document, in a separate file.</p>
+                <p>One of the advantages of external CSS is that the same CSS styles file can be used by multiple HTML documents (or web pages).                </p>
+                <p>Some developers prefer external CSS because it separates structure and style into different files. This means your web page project will consist of several files with different file extensions.                </p>
+                <p>External CSS is very useful for multi-page websites, as you can style the entire site in one place.</p>
+                <p>You don’t need /style/ tags in an external CSS file. You can add the styling rules directly.</p>
+                <p>
+                  ⭐ Specificity tells the browser which rule to apply<br>
+ ⭐ Comments in CSS start with /* and end with */ <br>
+⭐ External CSS means a separate file for the styling rules
+                </p>
+                <p>
+                  ⭐ RGB is a color model for accessing a wide spectrum of colors<br>
+⭐ RGB uses 3 values representing the intensity of red, green and blue<br>
+⭐ HEX codes make the representation of colors shorter
+                </p>
+                <p>
+                  RGB represent color <br>Ex. Rgb(0,0,0) is black ,<br>rgb(255,255,255) is white ,<br> rgb(255,255,0) is yellow 
+                </p>
+                <p>
+                  similar to RGB represent color <br>Ex. Rgb(0,0,0) is black ,<br>rgb(255,255,255) is white ,<br> rgb(255,255,0) is yellow 
+                <br>hex codes are used <br>Ex. #000000 is black , <br> #FFFFFF is white ,<br> #FFFF00 is yellow 
+                </p>
+                <p>
+                  HEX codes start with a hash symbol #, followed by 3 pairs of characters, each representing the intensity of red, green, and blue accordingly.
+                </p>
+                <p>Each character in a HEX code can have one of 16 possible values, spanning from 0 to 9 and extending to the letters A to F. 
+                  Each pair ranges from 00 (least intense) to FF (most intense).</p>
+
+                <p>Display devices like your phone screen are made of tiny picture elements known as pixels.
+                  Each pixel can emit a combination of red, green and blue light to produce any color in the RGB model.</p>
+
+
+                  <p>
+                    Dimensions
+                  </p>
+                  <p>
+                    A display like the screen of a phone is made of… picture element or pixel
+                  </p>
+                  <p>Pixels are used as a measuring unit to control the dimensions of elements. </p>
+                  <p>You can use pixels to control the size of elements. The font-size property controls text size.</p>
+                  <p>In most web browsers, the default size for text in paragraphs, buttons, lists, and tables is 16px.                  </p>
+                  <p>You can use values like small, medium and large for text size. They already have set pixel units.                  </p>
+                  <p>which is 13px 16px and 18px </p>
+                  <p>Modern websites are built to look great on screens of different sizes and resolutions. This approach is known as… Responsiv web design </p>
+                  <h1>Using pixels as a measurement unit is not a best practice when it comes to responsive web design.</h1>
+                  <p>Screens of different sizes and resolutions have different numbers of pixels and…
+                   --- pixels are fixed-sized units
+                    </p>
+                    <h1>To ensure the design of your page looks great on any screen, percentages (%) are used to set relative dimensions. This ensures consistent design across different screen sizes.                    </h1>
+                    <p>When styling an element using percentages (%), 100% would be the full size of its parent element.                    </p>
+                    
+                    <p>All the elements of a web page that are seen in the browser are nested inside the… <b>body</b>
+                    </p>
+                    <p>By default, the width of the body of a page matches the width of the device screen. This is very helpful to design responsive sites.                    </p>
+                    <p>
+                      --If the width of an HTML element is set to 50%...
+                       ====> it'll take half of its parent's width
+                    </p>
+                    <p>You can also use percentages to set the font size. Font sizes will be calculated using the parent's font size as reference.<br>
+
+                      If the parent's size is set to 20px, a child with font-size of 50% will display text of 10px</p>
+                      <p>The default font size for the body of a page in most browsers is 16px.</p>
+                      <p>⭐ size in CSS can be measured and set in pixels (px), and percentages (%)<br>
+                        ⭐ percentages % allow for more responsive designs, adjusting based on the dimensions of parent elements</p>
+                        <h1>Styling Text           </h1>
+
+
+                        <p>Use text-align: justify to align text to both the left and right edges by adjusting the spacing between words, ensuring that each line has equal width                        </p>
+
+                        <p>Text justification is often seen in books, magazines and newspapers, as it gives neat edges to the columns of text.</p>
+                        <p>You can add text-decoration to convey meaning or draw attention to specific pieces of text, like links.</p>
+                        <p>Some CSS properties can take multiple values. You can control the color for the decoration by adding a color name, rgb, or hex code after the decoration type.</p>
+
+                        <style>
+                           #par1 b{
+                            text-decoration: overline #ffff00;
+                            font-size: 24px;
+                          }
+                          #par2 b{
+                            text-decoration: dotted #ff0000 underline;
+                          }
+                          #par3 u{
+                            text-transform: capitalize;
+                          }
+                          #par3 b{
+                            text-transform: uppercase;
+                          }
+                          #par3 i{
+                            text-transform: lowercase;
+                          }
+                          #par4 {
+                            text-shadow: #ff0000 12px 14px;
+                            font-size: 100px;
+                          }
+                          #par5 {
+                            text-shadow: 12px  14px 10px #ffff00 ;
+                            font-size: 150;
+                          }
+                          #par6 {
+                            text-decoration-line  : underline;
+                            text-decoration-style:dashed;
+                            text-decoration-color: #00FF00;
+
+                          }
+                        </style>
+                        <p id="par1">The...
+                          <b>test text</b>....is Here !
+
+                        </p>
+                        <p>
+                          Text decoration can take on various styles, such as dotted, double, dashed, and wavy.
+                        </p>
+                        <P id="par6"> decoration- line , decoration- style and decoration-color</P>
+                        
+
+                        <p id="par2">
+                          The <b>test text</b> ...is here again !
+                        </p>
+                        <p>The text-decoration property is a short and simple way to refer to different sub-properties,<br> such as text-decoration-line, text-decoration-color, and text-decoration-style.</p>
+                        <p>
+                          The text-transform property allows you to control the capitalization of text content.
+                          <br>It can take 3 values: capitalize, uppercase and lowercase.
+                        </p>
+
+                        <p id="par3">
+                          <u>Text to be capitalized</u>
+                          <b>Text to be uppercase</b>
+                          <i>Text to be lowercase</i>
+                        </p>
+                        <p>
+                          The text-shadow creates a depth effect, gives emphasis, or just adds a stylish touch to your typography.<br>
+                          It takes two required values, in the given order: horizontal offset first, vertical offset second.
+                        </p>
+                        <p id="par4">
+                          Text here is to be shadow 
+                        </p>
+                        <p>The horizontal offset is how far to the right (positive values) or left (negative values) the shadow will be.<br>
+                          The vertical offset is how far down (positive values) or up (negative values) the shadow will be.</p>
+                          <p>
+                            Use AI
+                            
+                            5
+                            9 Comments
+                            The text-shadow can accept two additional, optional values.<br>
+                            blur radius: the amount of blur applied to the shadow 
+                            <br>color: the color of the shadow Ex.
+                            </p>
+                            <p id="par5">
+                              Shadow text with 2 extra properties...
+                            </p>
+                            <p>
+                              ⭐ text-align controls the horizontal alignment of text<br>
+⭐ text-decoration adds decorative effects to text<br>
+⭐ text-transform alters the capitalization of text<br>
+⭐ text-shadow applies shadow effects behind the text
+                            </p>
+                            <p>   Fonts play a crucial role in web design, influencing readability, aesthetics, and user experience. They breathe life into the words on a page and set the tone of the content.                            </p>
+                            <p>
+                              The font-family property in CSS lets you specify the typeface for your text. This determines how text looks on a webpage.
+                            </p>
+                            <p style="font-family: Times New Roman;">arial font family</p>
+
+                            <p>Many fonts are installed by default in all devices. These are known as web safe fonts.
+
+                              Other fonts might need to be installed on the user’s device, so you’ll need to specify a web safe font as a back-up, in case the user doesn’t have them                            </p>
+
+                              <p>The font-family property specifies a list of fonts, from highest priority to lowest. Font selection stops at the first font in the list that is on the user's system. </p>
+                             <!--    web safe mode and the sytem choose font family by order -->
+                              <p style="font-family: Arial, Helvetica, sans-serif;">Test</p>
+                              <p>Use quotes to wrap font names with multiple words. It's good practice. </p>
+                              <p style="font-family: 'Times New Roman', Times, serif;">Test</p>
+                              <p>The font-weight property controls the thickness (or boldness) of the text.                              </p>
+                              <p>You can use numerical values from 100 (thinnest) to 900 (thickest) to specify font weight, increasing in increments of 100.</p>
+                              <p>Certain weight values, such as 400 and 700, have named equivalents that can be used directly as values: normal and bold.</p>
+                              <p style="font-weight:800;">bolder me !</p>
+                              <p>⭐ font-family allows you to specify the typeface<br>
+                                ⭐ you can use font-weight to control the thickness of the text</p>
+                                <p>Styling links</p>
+                                <p>Links are the essence of the web, connecting one page to another. They’re crucial for navigation, but the default blue underlined style doesn’t always fit every design.<br>
+                                  In this lesson, you’ll learn to style links to match your website’s theme and improve user experience.</p>
+                                 <p>html tag for links is ->a continer tag and href="" </p> 
+                                 <p>A link is by default blue in color and underlined.<br>
+                                  You can override this default style with CSS to customize colors, fonts and decorators.</p>
+                                  <a href="https://www.youtube.com" style="color: #ffff00;background-color: #ff0000;font-family: Georgia, 'Times New Roman', Times, serif; ">Youtube</a>
+
+                                  <p>You can control the style of links that haven’t been visited by the user yet.                                  </p>
+                                  <p>When users interact with a link (also other elements) it changes its state. You can refer to the status of an element with pseudo selectors.  </p>
+                                  <p>Tip: Use the :link selector to style links to unvisited pages, the :hover selector to style links when you mouse over them, and the :active selector to style links when you click on them.</p>
+                                  <p>Examle hover </p>
+                                  <link rel="stylesheet" href="new.css">
+                                  <a id="hoverid" href="kb.com">my link !</a>
+
+                                  <p>A pseudo selector targets elements based on their… State                                  </p>
+                                  <p>Ex Create a rule to target a link with the ID of home when it has been visited                                  </p>
+                                  <a id="visitedid" href="https://www.youtube.com">tray to see me after visiting me </a>
+
+
+
+                    </html>
+
+

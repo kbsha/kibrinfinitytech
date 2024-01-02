@@ -1,0 +1,13 @@
+Responsive web design makes web pages look great on any screen.
+You’ll soon learn to make sites that adapt to any device, screen size and resolution in the CSS section of this course.
+Aboout Layout
+Layout tags like <header>, <main>, <footer> and <article> are semantic tags because they… give info about what they contain
+<section> helps to break down the content into parts.
+Complete to create the About Us section
+<section> is a semantic tag.
+It usually includes a heading.
+Complete to add an introduction section
+A web page could be split into separate sections for introduction, contact information, etc.
+<section> is… continer tag
+<aside> is used for secondary, additional or somehow related content.
+Complete the code to add an <aside>
