@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>Registration Form with Animations</title>
     <style>
         /* Basic CSS styling */
         body {
@@ -18,6 +18,7 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease forwards;
         }
         h2 {
             text-align: center;
@@ -33,6 +34,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+            animation: slideIn 0.5s ease forwards;
         }
         input[type="submit"] {
             background-color: #4caf50;
@@ -43,9 +45,22 @@
             border-radius: 4px;
             cursor: pointer;
             width: 100%;
+            animation: slideIn 0.5s ease forwards;
         }
         input[type="submit"]:hover {
             background-color: #45a049;
+        }
+
+        /* Animation keyframes */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
