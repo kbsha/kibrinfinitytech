@@ -3,111 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form with Cyber Background</title>
-    <style>
-        /* Basic CSS styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('cyber_background.jpg'); /* Replace 'cyber_background.jpg' with your image file */
-            background-size: cover;
-            background-position: center;
-            padding: 20px;
-        }
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            animation: slideIn 0.5s ease forwards;
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin: 6px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            animation: slideIn 0.5s ease forwards;
-        }
-        input[type="submit"] {
-            background-color: #4caf50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            animation: slideIn 0.5s ease forwards;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        /* Animation keyframes */
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <title>Registration Form</title>
 </head>
 <body>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Login</a>
-        <a href="#">Contact Us</a>
-    </nav>
-    <form action="/submit_registration" method="post">
-        <h2>Registration Form</h2>
+    <h2>Registration Form</h2>
+    <form action="register.php" method="post">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username" required><br><br>
         
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required><br><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" required><br><br>
         
         <label for="confirm_password">Confirm Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
-        
-        <label for="country">Country:</label>
-        <select id="country" name="country">
-            <option value="usa">USA</option>
-            <option value="canada">Canada</option>
-            <option value="uk">UK</option>
-            <option value="other">Other</option>
-        </select>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
         
         <input type="submit" value="Register">
     </form>
 </body>
 </html>
-
