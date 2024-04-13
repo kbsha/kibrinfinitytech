@@ -1,6 +1,6 @@
 <?php
 // Database connection parameters
-$servername = "jdbc:mysql://sql3.freesqldatabase.com:3306/sql3698731";
+$servername = "https://www.phpmyadmin.co/";
 $username = "sql3698731";
 $password = "FgFNZkbga7";
 $dbname = "sql3698731";
