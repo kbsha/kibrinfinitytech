@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form with Animations</title>
+    <title>Registration Form with Cyber Background</title>
     <style>
         /* Basic CSS styling */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('cyber_background.jpg'); /* Replace 'cyber_background.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
             padding: 20px;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         form {
             max-width: 400px;
             margin: 0 auto;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             animation: slideIn 0.5s ease forwards;
         }
         h2 {
@@ -65,6 +79,11 @@
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Login</a>
+        <a href="#">Contact Us</a>
+    </nav>
     <form action="/submit_registration" method="post">
         <h2>Registration Form</h2>
         <label for="username">Username:</label>
@@ -91,3 +110,4 @@
     </form>
 </body>
 </html>
+
