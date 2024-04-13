@@ -1,9 +1,9 @@
 <?php
 // Database connection parameters
-$servername = "localhost";
-$username = "your_username";
-$password = "your_password";
-$dbname = "your_database";
+$servername = "sql3.freesqldatabase.com";
+$username = "sql3698731";
+$password = "FgFNZkbga7";
+$dbname = "sql3698731";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
