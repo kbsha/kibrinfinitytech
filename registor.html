@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
 </head>
 <body>
-    <h2>Registration Form</h2>
-    <form action="register.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+<h2>Registration Form</h2>
+<form id="registrationForm">
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username" required><br>
+  
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" required><br>
+  
+  <button type="submit">Register</button>
+</form>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <label for="confirm_password">Confirm Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
-        
-        <input type="submit" value="Register">
-    </form>
+<script>
+document.getElementById("registrationForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+  
+  // Get form values
+  var username = document.getElementById("username").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  
+  // Validate form data
+  if (username && email && password) {
+    // Form data is valid, you can send it to the server or perform other actions here
+    console.log("Username:", username);
+    console.log("Email:", email);
+    console.log("Password:", password);
+    
+    // Clear form fields
+    document.getElementById("username").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+  } else {
+    // Display error message or handle invalid form data
+    alert("Please fill in all fields.");
+  }
+});
+</script>
 </body>
 </html>
