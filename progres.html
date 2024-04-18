@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Time and Date</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  h1 {
+    color: dodgerblue;
+  }
+
+  #datetime {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <h1>Current Time and Date</h1>
+  <div id="datetime"></div>
+
+  <script>
+    function updateDateTime() {
+      var now = new Date();
+      var date = now.toDateString();
+      var time = now.toLocaleTimeString();
+      var datetimeString = date + ' ' + time;
+      document.getElementById('datetime').textContent = datetimeString;
+    }
+
+    setInterval(updateDateTime, 1000); // Update every second
+    updateDateTime(); // Initial update
+  </script>
+</body>
+</html>
