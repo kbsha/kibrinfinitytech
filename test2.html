@@ -1,69 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Betting Site</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Startup Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+<style>
+    /* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #555;
+}
+
+/* Hamburger Menu Icon Styles */
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-toggle-label i {
+    font-size: 1.5em;
+}
+
+/* Media Query for Responsive Navigation */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-menu li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .nav-toggle-label {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    #nav-toggle:checked + .nav-menu {
+        display: flex;
+    }
+}
+
+/* Hero Section Styles */
+#hero {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Services Section Styles */
+#services {
+    padding: 50px 0;
+}
+
+.service {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service i {
+    font-size: 3em;
+    color: #333;
+}
+
+/* Features Section Styles */
+#features {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.feature {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature i {
+    font-size: 3em;
+    color: #333;
+}
+
+/* Contact Section Styles */
+#contact {
+    padding: 50px 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+</style>
 <header>
-  <div class="container">
-    <h1>Betting Site</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#betting">Betting</a></li>
-        <li><a href="#account">My Account</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<section id="home">
-  <div class="container">
-    <h2>Welcome to our Betting Site!</h2>
-    <p>Place your bets on your favorite sports and events.</p>
-  </div>
-</section>
-<section id="events">
-  <div class="container">
-    <h2>Upcoming Events</h2>
-    <!-- List of upcoming events -->
-    <ul>
-      <li>Event 1</li>
-      <li>Event 2</li>
-      <li>Event 3</li>
-      <!-- Add more events here -->
-    </ul>
-  </div>
-</section>
-<section id="betting">
-  <div class="container">
-    <h2>Place Your Bets</h2>
-    <!-- Betting options -->
-    <div class="betting-options">
-      <!-- Add betting options here -->
+    <div class="container">
+        <h1>Tech Startup</h1>
+        <nav>
+            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><i class="fas fa-bars"></i></label>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-  </div>
+</header>
+
+<section id="hero">
+    <div class="container">
+        <h2>Welcome to Tech Startup</h2>
+        <p>We are dedicated to providing cutting-edge technology solutions.</p>
+        <a href="#contact" class="btn">Get Started</a>
+    </div>
 </section>
-<section id="account">
-  <div class="container">
-    <h2>My Account</h2>
-    <!-- User account details -->
-    <p>Username: JohnDoe</p>
-    <p>Email: johndoe@example.com</p>
-    <!-- Add more account details as needed -->
-  </div>
+
+<section id="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="service">
+            <i class="fa fa-laptop"></i>
+            <h3>Web Development</h3>
+            <p>We create stunning websites tailored to your business needs.</p>
+        </div>
+        <div class="service">
+            <i class="fa fa-mobile"></i>
+            <h3>App Development</h3>
+            <p>From iOS to Android, we build mobile apps that stand out.</p>
+        </div>
+        <div class="service">
+            <i class="fa fa-database"></i>
+            <h3>Database Solutions</h3>
+            <p>Efficient and scalable database systems for your business.</p>
+        </div>
+    </div>
 </section>
-<footer id="contact">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <p>Email: info@bettingsite.com</p>
-    <p>Phone: +1234567890</p>
-    <!-- Add more contact information as needed -->
-  </div>
-</footer>
-</body>
-</html>
+
+<section id="features">
+    <div class="container">
+        <h2>Key Features</h2>
+        <div class="feature">
+            <i class="fa fa-cogs"></i>
+            <h3>Customizable</h3>
+            <p>Our solutions are tailored to fit your unique requirements.</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-line-chart"></i>
+            <h3>Scalable</h3>
+            <p>Grow your business with technology that can scale with you.</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-lock"></i>
+            <h3>Secure</h3>
+            <p>Protecting your data is our top priority.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="submit.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
