@@ -1,133 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kibremoges Fenta Portfolio</title>
-    <style>
-        /* Style for circular images */
-    .circular-image {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%; /* This creates a circular shape */
-        overflow: hidden; /* Hide any content that overflows the circular shape */
-    }
-        /* Resetting default margin and padding */
-        body, h1, h2, h3, p, ul, li {
-            margin: 0;
-            padding: 0;
-        }
-        /* Body styling */
-        body {
-            
-            font-family: Arial, sans-serif;
-            background-color: #0d1010;
-            color: #333;
-        }
-        /* Container styling */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        /* Header styling */
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        header h1 {
-            font-size: 3em;
-            color: #eddd27;
-            text-decoration: underline;
-            margin-bottom: 10px;
-        }
-        header h2 {
-            font-size: 2em;
-            color: #eef130;
-            margin-bottom: 20px;
-        }
-        header h3 {
-            font-size: 1.5em;
-            color: #e7dd1c;
-            margin-bottom: 30px;
-        }
-        /* Main content styling */
-        main {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        /* Card styling */
-        .card {
-            width: calc(33.33% - 20px);
-            margin-bottom: 40px;
-            background-color: #6a96cc;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px 10px 0 0;
-        }
-        .card-content {
-            padding: 20px;
-        }
-        .card-content h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .card-content p {
-            margin-bottom: 20px;
-        }
-        .card-content a {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .card-content a:hover {
-            background-color: #2E8B57;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Kibremoges Fenta Portfolio</h1>
-            <h2>Kibr_infinity_tech</h2>
-            <h3>by Kbsha</h3>
-        </header>
-        <main>
-            <div class="card">
-                <img class="circular-image" src="photo/kb.JPG" alt="Kibremoges Photo">
-                <div class="card-content">
-                    <h2>About Me</h2>
-                    <p>I am Kbsha, a passionate -> Hacker , web developer and content creator.</p>
-                    <a href="#about">Learn More</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="photo/project.jpg" alt="Projects">
-                <div class="card-content">
-                    <h2>My Projects</h2>
-                    <a href="/HomePage/index.html">Homepage</a>
-                    <p>Explore the exciting projects I've worked on.</p>
-                    <a href="test.html">View Projects</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="photo/contact.jpg" alt="Contact">
-                <div class="card-content">
-                    <h2>Contact Me</h2>
-                    <p>Let's connect and discuss your next project.</p>
-                    <a href="#
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <title>InfinityTech.org</title>
+
+    <!-- Bootstrap -->
+	  
+	  <link href="StartUp/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	  <link href="StartUp/startup.css" rel="stylesheet">
+	  
+	  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	  
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar">
+
+    	<nav class ="navbar navbar-fixed-top navbar-inverse" id="navbar">
+	  		
+			<div class="container">
+				
+				<div class="navbar-header">	
+											
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					
+					<span class="icon-bar"></span>	
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				
+					<a class="navbar-brand" href="indx.html" >
+						infinitytech.org
+						<img  src="/kibrinfinitytech/photo/KB_Logo.png" style="width: 50px; height: 50px";/>
+						</a>
+				</div><!-- navbar-header -->	
+				
+			
+				<div class="collapse navbar-collapse" id="navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#home">Home</a></li>
+					<li><a href="#why-us">About</a></li>		
+					<li><a href="#team">Our Team</a></li>
+					<li><a href="#signup">Contact</a></li>
+				 	</ul>
+				</div>	
+			</div><!-- container -->
+	  	
+	  	</nav>
+
+   		<div class="cover" id="home">
+	  		<div class="cover-text">
+				<h1>You probaby haven&rsquo;t heard of us.<br><br></h1>
+				<p class="lead"> ... Well come.</p>
+			
+	  			<a href="/kibrinfinitytech/HomePage/index.html" role="button" class="btn btn-danger btn-lg">Get Started up</a>
+			</div>
+	  	</div>
+
+	  	<section class="testimonial">
+			<div class="container">
+				<blockquote>
+					&ldquo; Just because something doesn’t do what you planned it to do doesn’t mean it’s useless.  &rdquo;
+					<cite>&mdash;  Thomas Edison (Inventor)</cite>
+				</blockquote>
+			</div>
+	  	</section>
+	  
+	  	<section id="why-us" >
+	  		<h2>Why infinitytech.org ?</h2>
+	  			<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<h3>1.Revolutionary AI-Powered Analytics Platform</h3>
+							<p>Our AI-powered analytics platform, InsightX, revolutionizes how businesses interpret their data. InsightX uses machine learning algorithms to provide real-time insights, predictive analytics, and actionable recommendations, helping companies make informed decisions faster and more accurately. For instance, a leading retail chain using InsightX increased their sales by 20% within six months by optimizing their inventory management and customer engagement strategies based on our platform's insights.
+                            </p>
+						</div>
+                        <div class="col-sm-4">
+							<h3>2.Expert Team with Proven Success in Complex Projects</h3>
+							<p>Our team of experts recently completed a large-scale digital transformation project for a global financial institution. This project involved migrating their entire legacy system to a secure, cloud-based infrastructure while ensuring zero downtime and seamless integration. Our team’s deep understanding of financial regulations and cybersecurity protocols ensured a smooth transition, resulting in a 30% reduction in operational costs and a 40% increase in system efficiency for the client.
+                            </p>
+						</div>
+                        <div class="col-sm-4">
+							<h3>3.Customer-Centric Development of a Custom E-Commerce Solution</h3>
+							<p>We developed a custom e-commerce solution for a growing fashion retailer that needed a scalable, user-friendly online platform. Our team worked closely with the client to understand their specific requirements and delivered a solution that included advanced search functionalities, personalized recommendations, and seamless payment integration. This new platform led to a 50% increase in online sales and a 25% rise in customer retention rates within the first year of implementation.
+</p>
+						</div>
+						
+					</div>
+				</div>
+	  	</section>
+	  
+	  <section id="team">
+		<h2>Meet our Team</h2>
+		  <div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<img src="StartUp/img/kbsha.jpg" alt="Man's face" class="img-circle">
+					<h4>Kbsha kibremoges</h4>
+					<p>Developer & Cyber Expert.</p>	
+				</div>
+				<div class="col-sm-3">
+					<img src="StartUp/img/kb_logo.jpg" alt="logo " class="img-circle">
+					<h4>&copy;KB infinitytech.org</h4>
+					<p>&copy;infinitytech.org All Digital Solution Is Here !.</p>	
+				</div>
+				
+			</div>
+		  
+		 </div>
+	  </section>
+	  
+	 <section id="signup">
+	  	<div class="container">
+		 	<h2>Subscribe for our Newsletter</h2>
+			<p class="lead">We'll send you about our latest updates, sizzling sales and upcoming trends!</p>
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<form>
+						<div class="input-group">
+							<input type="text" class="form-control input-lg" placeholder="Your email address...">
+						<span class="input-group-btn">
+							<button class="btn btn-warning btn-lg" type="button">Handcraft it</button>
+							</span> 
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	  </section> -->
+	  
+	  <footer>
+	  		All Right is Reserved  2024&copy; by <a href="infinitytech.org">KBsha</a>
+			  <img  src="/kibrinfinitytech/photo/KB_Logo.png" style="width: 50px; height: 50px";/>
+	  </footer>
+	  
+	  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
