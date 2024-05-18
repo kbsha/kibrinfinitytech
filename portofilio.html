@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kibremoges Fenta Portfolio</title>
+    <style>
+        /* Style for circular images */
+    .circular-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%; /* This creates a circular shape */
+        overflow: hidden; /* Hide any content that overflows the circular shape */
+    }
+        /* Resetting default margin and padding */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        /* Body styling */
+        body {
+            
+            font-family: Arial, sans-serif;
+            background-color: #0d1010;
+            color: #333;
+        }
+        /* Container styling */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        /* Header styling */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 3em;
+            color: #eddd27;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+        header h2 {
+            font-size: 2em;
+            color: #eef130;
+            margin-bottom: 20px;
+        }
+        header h3 {
+            font-size: 1.5em;
+            color: #e7dd1c;
+            margin-bottom: 30px;
+        }
+        /* Main content styling */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        /* Card styling */
+        .card {
+            width: calc(33.33% - 20px);
+            margin-bottom: 40px;
+            background-color: #6a96cc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .card-content p {
+            margin-bottom: 20px;
+        }
+        .card-content a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .card-content a:hover {
+            background-color: #2E8B57;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kibremoges Fenta Portfolio</h1>
+            <h2>Kibr_infinity_tech</h2>
+            <h3>by Kbsha</h3>
+        </header>
+        <main>
+            <div class="card">
+                <img class="circular-image" src="photo/kb.JPG" alt="Kibremoges Photo">
+                <div class="card-content">
+                    <h2>About Me</h2>
+                    <p>I am Kbsha, a passionate -> Hacker , web developer and content creator.</p>
+                    <a href="#about">Learn More</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="photo/project.jpg" alt="Projects">
+                <div class="card-content">
+                    <h2>My Projects</h2>
+                    <a href="/HomePage/index.html">Homepage</a>
+                    <p>Explore the exciting projects I've worked on.</p>
+                    <a href="test.html">View Projects</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="photo/contact.jpg" alt="Contact">
+                <div class="card-content">
+                    <h2>Contact Me</h2>
+                    <p>Let's connect and discuss your next project.</p>
+                    <a href="#
