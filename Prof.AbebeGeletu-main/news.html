@@ -1,0 +1,641 @@
+---
+layout: default
+permalink: /news.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Posts</title>
+    <!-- <style>
+        body {
+            background-color: wheat;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #7a5a32;
+            text-decoration: underline;
+        }
+        .post-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .post-item {
+            background-color: white;
+            margin: 15px 0;
+            padding: 15px;
+            border-left: 4px solid #333;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .post-item h3 {
+            margin-top: 0;
+            color: #7a5a32;
+        }
+        .post-date {
+            color: #7a5a32;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        .post-link {
+            color: #7a5a32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .post-link:hover {
+            text-decoration: underline;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: wheat;
+            color: #7a5a32;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #555;
+        }
+        .comment-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .comment-form {
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #333;
+            box-shadow: 0 0 5px rgba(51, 51, 51, 0.3);
+        }
+        .post-btn {
+            background-color: #333;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .post-btn:hover {
+            background-color: #555;
+        }
+        .post-btn:active {
+            transform: scale(0.98);
+        }
+        .user-posts {
+            margin-top: 30px;
+            border-top: 2px solid #ddd;
+            padding-top: 20px;
+        }
+        .user-post {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #0066cc;
+            border-radius: 4px;
+        }
+        .user-post-author {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .user-post-time {
+            font-size: 0.85em;
+            color: #999;
+            margin-bottom: 10px;
+        }
+        .user-post-text {
+            color: #555;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+        .delete-btn {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .delete-btn:hover {
+            background-color: #b71c1c;
+        }
+        .no-posts {
+            color: #999;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+    </style> -->
+ <style>
+
+    /* ===== Design Tokens ===== */
+:root {
+  --bg-main: #f5f1ea;
+  --bg-card: #ffffff;
+  --primary: #7a5a32;
+  --secondary: #333333;
+  --accent: #0066cc;
+  --danger: #d32f2f;
+
+  --text-main: #2b2b2b;
+  --text-muted: #777777;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.08);
+  --shadow-md: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* ===== Global ===== */
+body {
+  background-color: var(--bg-main);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== Headings ===== */
+h1 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+h2, h3 {
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+
+/* ===== Post List ===== */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.post-item {
+  background: var(--bg-card);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.post-item h3 {
+  margin-top: 0;
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.post-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.post-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Buttons ===== */
+.back-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 22px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.back-button:hover {
+  background: #5f4525;
+  transform: translateY(-1px);
+}
+
+/* ===== Comment Section ===== */
+.comment-section {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-top: 50px;
+}
+
+.comment-form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(122, 90, 50, 0.15);
+}
+
+/* ===== Primary Action Button ===== */
+.post-btn {
+  background: #5f4525;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.post-btn:hover {
+  background: #111;
+}
+
+.post-btn:active {
+  transform: scale(0.97);
+}
+
+/* ===== User Posts ===== */
+.user-posts {
+  margin-top: 40px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+}
+
+.user-post {
+  background: #fafafa;
+  padding: 16px;
+  margin-bottom: 15px;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--accent);
+}
+
+.user-post-author {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.user-post-time {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.user-post-text {
+  color: #444;
+  white-space: pre-wrap;
+}
+
+/* ===== Delete Button ===== */
+.delete-btn {
+  margin-top: 10px;
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #b71c1c;
+}
+
+/* ===== Empty State ===== */
+.no-posts {
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 30px 0;
+}
+
+ </style>
+
+</head>
+<body>
+            <a href="index.html" class="back-button">← Back to Home</a>
+
+    <div class="container">
+        <h1><u>News &  Posts</u></h1>
+        <p>Welcome to my blog! Here I share articles and updates about web development, graphics design, and content creation.</p>
+        
+
+        
+        <ul class="post-list">
+            <!-- Jekyll Liquid - Automatically list all posts from _posts folder -->
+            {% for post in site.posts %}
+            <li class="post-item">
+                <h3>{{ post.title }}</h3>
+                <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ post.url }}" class="post-link">Read More →</a>
+            </li>
+            {% endfor %}
+
+            <!-- Fallback posts for local viewing -->
+            <li class="post-item">
+                <h3>Aotonomous Dron</h3>
+                <p class="post-date">January 16, 2026</p>
+                <p>i test test test ....</p>
+                <a href="#" class="post-link">Read More →</a>
+            </li>
+
+            <li class="post-item">
+                <h3>Getting Started with Web Development</h3>
+                <p class="post-date">January 16, 2026</p>
+                <p>A beginner's guide to starting your journey in web development. Learn the basics of HTML, CSS, and JavaScript.</p>
+                <a href="#" class="post-link">Read More →</a>
+            </li>
+
+            <li class="post-item">
+                <h3>Graphics Design Tips and Tricks</h3>
+                <p class="post-date">January 10, 2026</p>
+                <p>Essential tips for creating stunning graphics designs. Learn about color theory, composition, and design principles.</p>
+                <a href="#" class="post-link">Read More →</a>
+            </li>
+
+            <li class="post-item">
+                <h3>Content Creation Best Practices</h3>
+                <p class="post-date">January 5, 2026</p>
+                <p>How to create engaging content that resonates with your audience. Tips on storytelling, SEO, and audience engagement.</p>
+                <a href="#" class="post-link">Read More →</a>
+            </li>
+
+            <li class="post-item">
+                <h3>Building Your First Portfolio Website</h3>
+                <p class="post-date">December 28, 2025</p>
+                <p>Step-by-step guide to creating an impressive portfolio website. Showcase your skills and attract potential clients.</p>
+                <a href="#" class="post-link">Read More →</a>
+            </li>
+        </ul>
+
+        <!-- Comment/Post Section -->
+        <div class="comment-section">
+            <h2>💬 Share Your Thoughts</h2>
+            <p>Have something to say? Leave a comment below!</p>
+            
+            <form class="comment-form" id="commentForm">
+                <div class="form-group">
+                    <label for="authorName">Your Name:</label>
+                    <input type="text" id="authorName" name="authorName" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="commentText">Your Post/Comment:</label>
+                    <textarea id="commentText" name="commentText" placeholder="Write your comment or post here..." required></textarea>
+                </div>
+                
+                <button type="submit" class="post-btn">📝 Post Comment</button>
+            </form>
+
+            <!-- Display User Posts -->
+            <div class="user-posts" id="userPostsContainer">
+                <h3>Recent Comments:</h3>
+                <div id="postsDisplay" class="no-posts">No comments yet. Be the first to comment!</div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">← Back to Home</a>
+    </div>
+<!-- news.html -->
+<section id="news-source" style="display:none;">
+  <article class="news-item">
+    <h3>AI Conference 2026 Highlights</h3>
+    <time datetime="2026-01-15">January 15, 2026</time>
+    <p>Key takeaways from the AI Conference including MPC and autonomous systems.</p>
+  </article>
+
+  <article class="news-item">
+    <h3>New Research Published</h3>
+    <time datetime="2026-01-10">January 10, 2026</time>
+    <p>Our paper on Intelligent MPC has been officially published.</p>
+  </article>
+
+  <article class="news-item">
+    <h3>Lab Demo Day</h3>
+    <time datetime="2026-01-05">January 5, 2026</time>
+    <p>Students showcased real-time autonomous control systems.</p>
+  </article>
+</section>
+
+    <script>
+        // Get DOM elements
+        const commentForm = document.getElementById('commentForm');
+        const authorInput = document.getElementById('authorName');
+        const commentInput = document.getElementById('commentText');
+        const postsDisplay = document.getElementById('postsDisplay');
+
+        // Storage key for localStorage
+        const POSTS_STORAGE_KEY = 'kbsha_posts';
+
+        // Initialize - Load and display existing posts
+        function initializePosts() {
+            displayPosts();
+        }
+
+        // Add event listener to form
+        commentForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page refresh
+
+            // Get form values
+            const authorName = authorInput.value.trim();
+            const commentText = commentInput.value.trim();
+
+            // Validate input
+            if (!authorName || !commentText) {
+                alert('Please fill in all fields!');
+                return;
+            }
+
+            // Create post object
+            const newPost = {
+                id: Date.now(), // Unique ID based on timestamp
+                author: authorName,
+                text: commentText,
+                timestamp: new Date().toLocaleString()
+            };
+
+            // Get existing posts from localStorage
+            let posts = JSON.parse(localStorage.getItem(POSTS_STORAGE_KEY)) || [];
+
+            // Add new post to beginning of array (newest first)
+            posts.unshift(newPost);
+
+            // Save to localStorage
+            localStorage.setItem(POSTS_STORAGE_KEY, JSON.stringify(posts));
+
+            // Clear form
+            commentForm.reset();
+            authorInput.focus();
+
+            // Refresh display
+            displayPosts();
+
+            // Show success message
+            showSuccessMessage();
+        });
+
+        // Function to display all posts
+        function displayPosts() {
+            const posts = JSON.parse(localStorage.getItem(POSTS_STORAGE_KEY)) || [];
+
+            // Clear the display area
+            postsDisplay.innerHTML = '';
+
+            // If no posts, show message
+            if (posts.length === 0) {
+                postsDisplay.className = 'no-posts';
+                postsDisplay.textContent = 'No comments yet. Be the first to comment!';
+                return;
+            }
+
+            // Remove no-posts class if posts exist
+            postsDisplay.className = '';
+
+            // Display each post
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'user-post';
+                postElement.id = 'post-' + post.id;
+
+                postElement.innerHTML = `
+                    <div class="user-post-author">👤 ${escapeHtml(post.author)}</div>
+                    <div class="user-post-time">🕐 ${post.timestamp}</div>
+                    <div class="user-post-text">${escapeHtml(post.text)}</div>
+                    <button class="delete-btn" onclick="deletePost(${post.id})">Delete</button>
+                `;
+
+                postsDisplay.appendChild(postElement);
+            });
+        }
+
+        // Function to delete a post
+        function deletePost(postId) {
+            if (confirm('Are you sure you want to delete this post?')) {
+                let posts = JSON.parse(localStorage.getItem(POSTS_STORAGE_KEY)) || [];
+                posts = posts.filter(post => post.id !== postId);
+                localStorage.setItem(POSTS_STORAGE_KEY, JSON.stringify(posts));
+                displayPosts();
+            }
+        }
+
+        // Function to escape HTML (prevent XSS)
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // Show success message
+        function showSuccessMessage() {
+            const message = document.createElement('div');
+            message.style.cssText = 'position: fixed; top: 20px; right: 20px; background-color: #4CAF50; color: white; padding: 15px 20px; border-radius: 5px; z-index: 1000;';
+            message.textContent = '✅ Post submitted successfully!';
+            document.body.appendChild(message);
+
+            setTimeout(() => {
+                message.remove();
+            }, 3000);
+        }
+
+        // Initialize posts on page load
+        initializePosts();
+    </script>
+</body>
+</html>

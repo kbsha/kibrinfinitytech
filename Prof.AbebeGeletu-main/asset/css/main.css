@@ -1,0 +1,333 @@
+/* =====================================================
+   RESET + VARIABLES
+===================================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #513b1f;
+  --primary-soft: #7a5a32;
+  --bg: #f6f5f2;
+  --surface: #ffffff;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2.5rem 1rem;
+}
+
+section { margin-bottom: 3.5rem; }
+section h2 { font-size: 1.9rem; margin-bottom: 1.5rem; }
+section h3 { font-size: 1.3rem; }
+
+/* =====================================================
+   NAVIGATION (SINGLE SOURCE)
+===================================================== */
+.main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #efe9e1;
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.8rem;
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav-links a {
+  padding: 0.5rem 0.8rem;
+  font-weight: 600;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile drawer */
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+    background: #efe9e1;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -20px 0 40px rgba(0,0,0,0.25);
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+}
+
+/* =====================================================
+   HERO (ONE SYSTEM)
+===================================================== */
+.site-hero {
+  height: 100vh;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.7s ease;
+}
+
+.hero-slide.active { opacity: 1; }
+
+.site-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 3rem;
+  max-width: 600px;
+  color: #fff;
+}
+
+/* =====================================================
+   CARDS (BASE COMPONENT)
+===================================================== */
+.card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1.6rem;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.stat {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 1.6rem 1rem;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.stat h3 { font-size: 2rem; }
+.stat p { font-size: 0.9rem; color: var(--muted); }
+
+/* =====================================================
+   TAGS
+===================================================== */
+.tag {
+  display: inline-block;
+  background: #ede7df;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin: 0.3rem;
+}
+
+/* =====================================================
+   EVENTS
+===================================================== */
+.events-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.event-card {
+  background: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.event-image {
+  height: 220px;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-content {
+  padding: 1.8rem;
+  flex: 1;
+}
+
+.event-meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.btn-details {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =====================================================
+   GALLERY
+===================================================== */
+.gallery-main {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gallery-main img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 1.4rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+
+.gallery-nav.prev { left: 1rem; }
+.gallery-nav.next { right: 1rem; }
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.gallery-thumbnails img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* =====================================================
+   VIDEO
+===================================================== */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =====================================================
+   MODAL / LIGHTBOX
+===================================================== */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.show { display: flex; }
+
+.lightbox-content img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (min-width: 640px) {
+  .events-grid { grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); }
+}
+
+@media (min-width: 1024px) {
+  section h2 { font-size: 2.2rem; }
+}

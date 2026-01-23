@@ -1,0 +1,36 @@
+# Jekyll Configuration for kbsha.github.io
+
+# Site settings
+title: Kibremoges Fenta Portfolio
+description: Portfolio and blog for web development, graphics design, and content creation
+author: Kibremoges Fenta
+email: your-email@example.com
+url: https://kbsha.github.io
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-cayman
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /posts/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude files from processing
+exclude:
+  - BLOG_DOCUMENTATION.md
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      category: blog
