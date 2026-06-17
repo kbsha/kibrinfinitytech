@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Blog | KB-Infinity Lab – Research & Insights</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/blog.js"></script>
+  <!-- Google Analytics (GA4) placeholder: replace MEASUREMENT_ID and uncomment to enable -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'MEASUREMENT_ID');
+  </script>
+  -->
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<!-- <header class="navbar">
+  <div class="logo">KB-Infinity<span>Lab</span></div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <button class="hamburger" aria-controls="primaryNav" aria-expanded="false" aria-label="Menu">☰</button>
+  </div>
+
+  <nav id="primaryNav" class="nav-links" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header> -->
+
+<!-- ================= HEADER ================= -->
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html">
+    KB-Infinity<span>Lab</span>
+  </div>
+  
+  <div class="notifications">
+    <button id="notifBtn" class="notif-bell" aria-expanded="false" aria-label="Notifications">
+      <span class="bell">🔔</span>
+      <span id="notifCount" class="notif-badge">0</span>
+    </button>
+    <div id="notifDropdown" class="notif-dropdown" hidden>
+      <div class="notif-header"><strong>Notifications</strong><button id="clearNotifs" class="clear-btn">Clear</button></div>
+      <ul id="notifList" class="notif-list"></ul>
+      <div class="notif-footer"><a href="blog.html">View blog updates</a> · <a href="gallery.html">Gallery</a></div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <div class="visitor-count" id="visitorCount" title="Unique visitors (this browser)">
+      Visitors: <span id="vcnt">0</span>
+    </div>
+
+    <button class="hamburger" aria-controls="primaryNav" aria-expanded="false" aria-label="Menu">☰</button>
+  </div>
+
+  <nav id="primaryNav" class="nav-links" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="index.html">About</a>
+    <a href="index.html">Research</a>
+    <a href="index.html">Projects</a>
+    <a href="index.html">Publications</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="founder.html">Team</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero blog-hero">
+  <h1>Research Blog & Technical Articles</h1>
+  <p>
+    Insights, publications, lab updates, and technical discussions
+    from KB-Infinity Lab on robotics, AI, intelligent control, and
+    cyber-physical systems.
+  </p>
+</section>
+
+<!-- ================= BLOG FILTER ================= -->
+<section class="section blog-controls">
+  <input type="text" id="searchInput" placeholder="Search articles...">
+
+  <select id="categoryFilter">
+    <option value="all">All Topics</option>
+    <option value="robotics">Robotics</option>
+    <option value="mpc">Intelligent Control (MPC)</option>
+    <option value="ai">Artificial Intelligence</option>
+    <option value="cyber">Cybersecurity</option>
+    <option value="lab">Lab Updates</option>
+  </select>
+</section>
+
+<!-- ================= BLOG LIST ================= -->
+<section class="section blog-grid" id="blogGrid">
+
+  <!-- BLOG POST -->
+  <article class="blog-card" data-category="robotics mpc">
+    <div class="media-card">
+      <img src="assets/images/post-mpc.jpg" alt="Hybrid MPC">
+      <div class="media-overlay">
+        <h3>Hybrid MPC for AGVs</h3>
+        <p>Integration of MPC with learning-based perception for real-time navigation under uncertainty.</p>
+        <div class="more-links"><a href="gallery.html#mpc-agv" class="btn small">More photos</a></div>
+      </div>
+    </div>
+    <h2>Hybrid MPC for Autonomous Ground Vehicles in Urban Environments</h2>
+    <p class="meta">
+      <span>Robotics • MPC</span> | <span>March 2025</span>
+    </p>
+    <p class="excerpt">
+      This article explores the integration of Model Predictive Control (MPC)
+      with learning-based perception for real-time autonomous ground vehicle navigation
+      under uncertainty.
+    </p>
+    <a href="posts/mpc-agv.html" class="read-more">Read Article →</a>
+  </article>
+
+  <article class="blog-card" data-category="ai cyber">
+    <div class="media-card">
+      <img src="assets/images/post-ids.jpg" alt="Intrusion Detection">
+      <div class="media-overlay">
+        <h3>Deep Learning IDS</h3>
+        <p>Hybrid CNN–Transformer–BiLSTM architecture for detecting cyber attacks.</p>
+        <div class="more-links"><a href="gallery.html#ids-iot" class="btn small">More photos</a></div>
+      </div>
+    </div>
+    <h2>Deep Learning-Based Intrusion Detection for IoT Networks</h2>
+    <p class="meta">
+      <span>AI • Cybersecurity</span> | <span>February 2025</span>
+    </p>
+    <p class="excerpt">
+      We present a hybrid CNN–Transformer–BiLSTM architecture for detecting
+      cyber attacks in resource-constrained IoT environments.
+    </p>
+    <a href="posts/ids-iot.html" class="read-more">Read Article →</a>
+  </article>
+
+  <article class="blog-card" data-category="lab">
+    <div class="media-card">
+      <img src="assets/images/post-lab.jpg" alt="Lab Testbed">
+      <div class="media-overlay">
+        <h3>Lab Testbed & Field Experiments</h3>
+        <p>A behind-the-scenes look at our robotics lab setup and field-testing methodology.</p>
+        <div class="more-links"><a href="gallery.html#lab-testbed" class="btn small">More photos</a></div>
+      </div>
+    </div>
+    <h2>KB-Infinity Lab: Robotics Testbed Setup & Field Experiments</h2>
+    <p class="meta">
+      <span>Lab Update</span> | <span>January 2025</span>
+    </p>
+    <p class="excerpt">
+      A behind-the-scenes look at our robotics lab setup, hardware platforms,
+      simulation tools, and field-testing methodology.
+    </p>
+    <a href="posts/lab-testbed.html" class="read-more">Read Article →</a>
+  </article>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2025 KB-Infinity Lab — Research before hype.</p>
+</footer>
+
+</body>
+</html>

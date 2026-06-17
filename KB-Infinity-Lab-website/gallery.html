@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Gallery | KB-Infinity Lab – Research in Action</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/gallery.js"></script>
+  <!-- Google Analytics (GA4) placeholder: replace MEASUREMENT_ID and uncomment to enable -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'MEASUREMENT_ID');
+  </script>
+  -->
+</head>
+<body>
+
+<!-- <!-- ================= HEADER ================= -->
+<header class="navbar">
+  <div class="logo">KB-Infinity<span>Lab</span></div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <button class="hamburger" aria-controls="primaryNav" aria-expanded="false" aria-label="Menu">☰</button>
+  </div>
+
+  <nav id="primaryNav" class="nav-links" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+ -->
+
+ <!-- ================= HEADER ================= -->
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html">
+    KB-Infinity<span>Lab</span>
+  </div>
+  
+  <div class="notifications">
+    <button id="notifBtn" class="notif-bell" aria-expanded="false" aria-label="Notifications">
+      <span class="bell">🔔</span>
+      <span id="notifCount" class="notif-badge">0</span>
+    </button>
+    <div id="notifDropdown" class="notif-dropdown" hidden>
+      <div class="notif-header"><strong>Notifications</strong><button id="clearNotifs" class="clear-btn">Clear</button></div>
+      <ul id="notifList" class="notif-list"></ul>
+      <div class="notif-footer"><a href="blog.html">View blog updates</a> · <a href="gallery.html">Gallery</a></div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <div class="visitor-count" id="visitorCount" title="Unique visitors (this browser)">
+      Visitors: <span id="vcnt">0</span>
+    </div>
+
+    <button class="hamburger" aria-controls="primaryNav" aria-expanded="false" aria-label="Menu">☰</button>
+  </div>
+
+  <nav id="primaryNav" class="nav-links" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="index.html">About</a>
+    <a href="index.html">Research</a>
+    <a href="index.html">Projects</a>
+    <a href="index.html">Publications</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="founder.html">Team</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<!-- ================= HERO ================= -->
+<section class="hero gallery-hero">
+  <h1>Research in Action</h1>
+  <p>
+    Experiments, field deployments, events, and real-world
+    robotics research from KB-Infinity Lab.
+  </p>
+</section>
+
+<!-- ================= FILTER ================= -->
+<section class="section gallery-controls">
+  <button data-filter="all" class="active">All</button>
+  <button data-filter="lab">Lab Work</button>
+  <button data-filter="robotics">Robotics</button>
+  <button data-filter="field">Field Tests</button>
+  <button data-filter="events">Events</button>
+  <button data-filter="video">Videos</button>
+</section>
+
+<!-- ================= GALLERY GRID ================= -->
+<section class="section gallery-grid" id="galleryGrid">
+
+  <!-- IMAGE STORY -->
+  <div id="mpc-agv" class="gallery-item" data-category="robotics lab">
+    <img src="assets/images/agv-test.jpg" alt="AGV MPC Testing">
+    <div class="overlay">
+      <h3>AGV MPC Field Test</h3>
+      <p>
+        Real-time trajectory tracking and obstacle avoidance
+        using hybrid MPC on an autonomous ground vehicle.
+      </p>
+    </div>
+  </div>
+
+  <!-- IMAGE STORY -->
+  <div id="lab-testbed" class="gallery-item" data-category="lab">
+    <img src="assets/images/pcb-design.jpg" alt="PCB Design">
+    <div class="overlay">
+      <h3>Embedded Hardware Prototyping</h3>
+      <p>
+        Custom PCB design and sensor integration for
+        robotics and assistive systems.
+      </p>
+    </div>
+  </div>
+
+  <!-- VIDEO STORY -->
+  <div id="urban-nav" class="gallery-item video" data-category="robotics video">
+    <video src="assets/videos/robot-nav.mp4" muted></video>
+    <div class="overlay">
+      <h3>Vision-Based Navigation</h3>
+      <p>
+        Camera-based perception integrated with MPC
+        for autonomous navigation.
+      </p>
+    </div>
+  </div>
+
+  <!-- EVENT STORY -->
+  <div id="workshop" class="gallery-item" data-category="events">
+    <img src="assets/images/workshop.jpg" alt="Workshop">
+    <div class="overlay">
+      <h3>Research Workshop</h3>
+      <p>
+        Knowledge sharing and collaboration at AIMS-RIC,
+        Kigali.
+      </p>
+    </div>
+  </div>
+
+  <!-- Placeholder: SAFE-EDGE -->
+  <div id="safe-edge" class="gallery-item" data-category="robotics lab">
+    <img src="assets/images/hero1.jpg" alt="SAFE-EDGE">
+    <div class="overlay">
+      <h3>SAFE-EDGE</h3>
+      <p>AI-driven anomaly detection and safety monitoring for autonomous systems.</p>
+    </div>
+  </div>
+
+  <!-- Placeholder: IDS-IOT -->
+  <div id="ids-iot" class="gallery-item" data-category="lab">
+    <img src="assets/images/hero2.JPG" alt="IDS for IoT">
+    <div class="overlay">
+      <h3>AI-Based IDS for IoT</h3>
+      <p>Intrusion detection experiments and visualizations.</p>
+    </div>
+  </div>
+
+  <!-- NEW: KB lab overview video -->
+  <div id="kb-video" class="gallery-item video" data-category="video events">
+    <video src="assets/videos/kb.mp4" muted></video>
+    <div class="overlay">
+      <h3>KB Lab Overview</h3>
+      <p>Short lab introduction video showcasing projects and field tests.</p>
+    </div>
+  </div>
+
+  <!-- YOUTUBE VIDEO 1 -->
+  <div id="youtube-demo1" class="gallery-item video" data-category="video robotics">
+    <div class="youtube-thumbnail" style="background: url('https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg') center/cover;">
+      <div class="play-button">▶</div>
+    </div>
+    <div class="overlay">
+      <h3>Robot Demo - Replace with Your Video Title</h3>
+      <p>Replace VIDEO_ID_1 with your YouTube video ID and update this description.</p>
+    </div>
+    <iframe class="youtube-embed" width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;"></iframe>
+  </div>
+
+  <!-- YOUTUBE VIDEO 2 -->
+  <div id="youtube-demo2" class="gallery-item video" data-category="video events">
+    <div class="youtube-thumbnail" style="background: url('https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg') center/cover;">
+      <div class="play-button">▶</div>
+    </div>
+    <div class="overlay">
+      <h3>Workshop - Replace with Your Video Title</h3>
+      <p>Replace VIDEO_ID_2 with your YouTube video ID and update this description.</p>
+    </div>
+    <iframe class="youtube-embed" width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;"></iframe>
+  </div>
+
+</section>
+
+<!-- ================= STORY MODAL ================= -->
+<div class="modal" id="storyModal">
+  <span class="close">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage">
+    <video id="modalVideo" controls></video>
+    <div id="modalYoutube"></div>
+    <div class="modal-text">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2025 KB-Infinity Lab — Research before hype.</p>
+</footer>
+
+</body>
+</html>

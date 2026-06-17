@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KB-Infinity Lab | Intelligent Robotics & AI Research – Kigali</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+    <script defer src="js/blog.js"></script>
+  <script defer src="js/gallery.js"></script>
+  <!-- Google Analytics (GA4) placeholder: replace MEASUREMENT_ID and uncomment to enable -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'MEASUREMENT_ID');
+  </script>
+  -->
+  
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html">
+    KB-Infinity<span>Lab</span>
+  </div>
+  <div class="notifications">
+    <button id="notifBtn" class="notif-bell" aria-expanded="false" aria-label="Notifications">
+      <span class="bell">🔔</span>
+      <span id="notifCount" class="notif-badge">0</span>
+    </button>
+    <div id="notifDropdown" class="notif-dropdown" hidden>
+      <div class="notif-header"><strong>Notifications</strong><button id="clearNotifs" class="clear-btn">Clear</button></div>
+      <ul id="notifList" class="notif-list"></ul>
+      <div class="notif-footer"><a href="blog.html">View blog updates</a> · <a href="gallery.html">Gallery</a></div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <div class="visitor-count" id="visitorCount" title="Unique visitors (this browser)">
+      Visitors: <span id="vcnt">240</span>
+ <span id="localTime" aria-live="polite"></span>
+    </div>
+
+    <button class="hamburger" aria-controls="primaryNav" aria-expanded="false" aria-label="Menu">☰</button>
+  </div>
+
+  <nav id="primaryNav" class="nav-links" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="founder.html">Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <h1>
+    Intelligent Robotics & AI<br>
+    <span>for Real-World Autonomous Systems</span>
+  </h1>
+
+  <p>
+    KB-Infinity Lab (Kigali Intelligent Robotics & AI Laboratory) is a multidisciplinary
+    research lab advancing autonomous systems, intelligent control, embedded AI,
+    and secure cyber-physical systems in Africa.
+  </p>
+
+  <a href="#projects" class="btn">Explore Research</a>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <h2>About the Lab</h2>
+
+  <p>
+    KB-Infinity Lab is an applied research laboratory focused on bridging advanced
+    academic research with deployable, resource-efficient autonomous and intelligent
+    systems. The lab integrates robotics, Model Predictive Control (MPC),
+    machine learning, embedded systems, and cybersecurity.
+  </p>
+
+  <p>
+    The lab is aligned with PhD-level research and operates in close connection with
+    academic institutions, industry partners, and innovation ecosystems.
+  </p>
+</section>
+
+<!-- ================= RESEARCH ================= -->
+<section id="research" class="section dark">
+  <h2>Research Pillars</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Autonomous Systems</h3>
+      <p>Autonomous Ground Vehicles (AGVs), mobile robots, navigation and planning.</p>
+    </div>
+
+    <div class="card">
+      <h3>Intelligent Control</h3>
+      <p>Model Predictive Control (MPC), hybrid MPC + learning, robust control.</p>
+    </div>
+
+    <div class="card">
+      <h3>Edge AI & Perception</h3>
+      <p>Computer vision, deep learning, efficient inference on embedded platforms.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cyber-Physical Security</h3>
+      <p>AI-based intrusion detection and anomaly monitoring for IoT systems.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section">
+  <h2>Flagship Projects</h2>
+
+  <div class="grid">
+    <div class="card">
+      <div class="media-card">
+        <img src="assets/images/urban-nav.jpg" alt="URBAN-NAV">
+        <div class="media-overlay">
+          <h3>URBAN-NAV</h3>
+          <p>Uncertainty-aware vision-based autonomous navigation using hybrid MPC on edge robotics platforms.</p>
+          <div class="more-links">
+            <a href="gallery.html#urban-nav" class="btn small">More photos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="media-card">
+        <img src="assets/images/safe-edge.jpg" alt="SAFE-EDGE">
+        <div class="media-overlay">
+          <h3>SAFE-EDGE</h3>
+          <p>AI-driven anomaly detection and safety monitoring for autonomous and cyber-physical systems.</p>
+          <div class="more-links">
+            <a href="gallery.html#safe-edge" class="btn small">More photos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="media-card">
+        <img src="assets/images/ids-iot.jpg" alt="AI-Based IDS for IoT">
+        <div class="media-overlay">
+          <h3>AI-Based IDS for IoT</h3>
+          <p>Hybrid CNN–Transformer–BiLSTM intrusion detection system optimized for resource-constrained environments.</p>
+          <div class="more-links">
+            <a href="gallery.html#ids-iot" class="btn small">More photos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="media-card">
+        <img src="assets/images/mpc-agv.jpg" alt="Intelligent MPC for AGVs">
+        <div class="media-overlay">
+          <h3>Intelligent MPC for AGVs</h3>
+          <p>Real-time trajectory planning, obstacle avoidance, and adaptive control for autonomous ground vehicles.</p>
+          <div class="more-links">
+            <a href="gallery.html#mpc-agv" class="btn small">More photos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+<section id="publications" class="section dark">
+  <h2>Publications & Research Outputs</h2>
+
+  <ul class="pub-list">
+    <li>
+      <strong>MSc Thesis:</strong> Hybrid Deep Learning-Based Intrusion Detection
+      System for IoT Networks
+      <a href="https://www.itu.int/net/epub/TSB/2025-AI-for-Good-Innovate-for-Impact/index.html#p=471" target="_blank">
+        [ITU Link]
+      </a>
+    </li>
+
+    <li>
+      <strong>BSc Project:</strong> Intelligent Interface Control for Users with Disabilities
+      <a href="https://www.itu.int/net/epub/TSB/2025-AI-for-Good-Innovate-for-Impact/index.html#p=773" target="_blank">
+        [ITU Link]
+      </a>
+    </li>
+
+    <li>
+      <strong>Ongoing:</strong> Intelligent MPC for Autonomous Ground Vehicles
+      (publication in preparation)
+    </li>
+
+    <li>
+      Open-source robotics controllers & datasets
+      <a href="https://github.com/kbsha/kb_Robotics/tree/main/kb_robot_controller/kb_robot_controller" target="_blank">
+        [GitHub]
+      </a>
+    </li>
+  </ul>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section id="team" class="section">
+  <h2>Team</h2>
+
+  <div class="team-card">
+    <h3>Founder & Research Director</h3>
+    <p>
+      MSc Researcher at the African Institute for Mathematical Sciences –
+      Research and Innovation Centre (AIMS-RIC), Kigali.
+    </p>
+
+    <p>
+      Research focus includes autonomous systems, robotics, intelligent control (MPC),
+      embedded AI, and cybersecurity for cyber-physical systems.
+    </p>
+
+    <a href="founder.html" class="btn">View Full Academic Profile</a>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section dark">
+  <h2>Contact</h2>
+  <p>Email: <strong>contact@kb-infinity.ai</strong></p>
+  <p>Location: Kigali, Rwanda</p>
+
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f5f5; margin:0; padding:0;}
+    header.navbar { background: #030303; color: #fff; padding:1rem; display:flex; justify-content:space-between; align-items:center;}
+    header.navbar a { color:#fff; margin-left:1rem; text-decoration:none; font-weight:500;}
+    header.navbar a:hover { text-decoration:wavy;}
+    main { max-width:1000px; margin:2rem auto; padding:1rem; background:#fff; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+    h1,h2 { color:#222; margin-bottom:1rem; }
+    form { display:flex; flex-direction:column; gap:1rem; }
+    input, textarea { padding:0.8rem; border:1px solid #ccc; border-radius:5px; font-size:1rem; width:100%; }
+    button { padding:1rem; border:none; border-radius:5px; background:#222; color:#fff; font-weight:bold; cursor:pointer; transition:0.3s; }
+    button:hover { background:#eccb0d; }
+    .contact-info { display:flex; flex-direction:column; gap:0.5rem; margin-bottom:2rem; }
+    .social-links a { margin-right:1rem; color:#222; text-decoration:none; font-weight:bold; }
+    .social-links a:hover { color:#0073e6; }
+    #map { width:100%; height:300px; border-radius:10px; border:1px solid #ccc; margin-top:1rem; }
+    @media(max-width:600px) { main { margin:1rem; padding:1rem; } }
+  </style>
+  
+  <main>
+  <h1>Contact KB-Infinity Lab</h1>
+  <p>We’d love to hear from you — whether it’s research collaboration, project inquiries, or feedback!</p>
+
+  <section class="contact-info">
+    <h2>Lab Details</h2>
+    <p>Email: <a href="mailto:contact@kb-infinity.ai">contact@kb-infinity.ai</a></p>
+    <p>Phone: +250 XXX XXX XXX</p>
+    <p>Location: Kigali, Rwanda</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/kibremoges" target="_blank">LinkedIn</a>
+      <a href="https://github.com/kbsha" target="_blank">GitHub</a>
+      <a href="https://twitter.com/kibsha" target="_blank">X/Twitter</a>
+    </div>
+  </section>
+
+  <!-- Email Feedback Form -->
+  <section id="feedback">
+    <h2>Send Us a Message</h2>
+    <form action="mailto:contact@kb-infinity.ai" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="font-size:0.9rem; color:#666;">*This form opens your email client. For in-page comments, see the discussion section below.</p>
+  </section>
+
+  <!-- Giscus Discussion -->
+  <section id="comments">
+    <h2>💬 Discussion </h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="kbsha/KB-Infinity-Lab-page"
+        data-repo-id="R_kgDOQxqMgA"
+        data-category="General"
+        data-category-id="DIC_kwDOQxqMgM4C0fKX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </section>
+
+  <!-- Google Maps Embed -->
+  <section id="location">
+    <h2>Find Us</h2>
+    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.123456!2d30.0!3d-1.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d0abcdef!2sKigali!5e0!3m2!1sen!2srw!4v1699999999999" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+</main>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <form id="subscribeForm" class="subscribe-form" aria-label="Subscribe to KB-Infinity Lab updates">
+    <input id="subscribeEmail" type="email" placeholder="Your email for news & updates" required>
+    <button type="submit" class="btn small">Subscribe</button>
+  </form>
+  <div id="subscribeMsg" class="subscribe-msg" aria-live="polite"></div>
+
+  <p>© 2025 KB-Infinity Lab — Research before hype.</p>
+</footer>
+
+</body>
+</html>

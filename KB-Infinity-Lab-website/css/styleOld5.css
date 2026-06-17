@@ -1,0 +1,305 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img, video {
+    display: block;
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #0b1c2d;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    position: relative;
+    margin: 0 12px;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #00aaff;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: #00aaff;
+}
+
+/* ===== HERO SECTIONS ===== */
+.hero, .blog-hero, .gallery-hero {
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.hero {
+    background: linear-gradient(to right, #001f3f, #003366);
+}
+
+.blog-hero {
+    background: linear-gradient(135deg, #0b1c2d, #123b5a);
+}
+
+.gallery-hero {
+    background: linear-gradient(135deg, #0b1c2d, #1a4d7a);
+}
+
+/* ===== SECTION ===== */
+.section {
+    padding: 60px 20px;
+}
+
+.section.dark {
+    background: #eaeff5;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* ===== CARDS ===== */
+.card, .blog-card, .project {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover, .blog-card:hover, .project:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ===== BLOG ===== */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.blog-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.blog-card .meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.blog-card .excerpt {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0056b3;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.read-more::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #0056b3;
+    transition: width 0.3s ease;
+}
+
+.read-more:hover::after {
+    width: 100%;
+}
+
+/* ===== BUTTONS ===== */
+.btn, .gallery-controls button, button {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    background: #0b1c2d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn::after, .gallery-controls button::after, button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,170,255,0.15);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+.btn:hover::after, .gallery-controls button:hover::after, button:hover::after {
+    transform: scaleX(1);
+}
+
+.btn:hover, .gallery-controls button:hover, button:hover {
+    color: #fff;
+}
+
+/* ===== GALLERY ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), filter 0.4s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+    transform: scale(1.1) rotateZ(1deg);
+    filter: brightness(0.85);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    opacity: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(20px);
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    max-width: 900px;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-content img,
+.modal-content video {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.close {
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+/* ===== COMMENTS ===== */
+#comments {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ccc;
+}
+
+#comments h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #0b1c2d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE TOUCH HOVER ===== */
+@media (hover: none) and (pointer: coarse) {
+    .card, .blog-card, .project, .gallery-item {
+        transform: none !important;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    }
+
+    .gallery-item img, .gallery-item video {
+        transform: scale(1) !important;
+        filter: brightness(1) !important;
+    }
+
+    .overlay {
+        opacity: 1;
+        transform: none;
+    }
+}
